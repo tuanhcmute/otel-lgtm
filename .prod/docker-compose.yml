@@ -4,11 +4,6 @@ volumes:
 services:
   otel-lgtm:
     image: grafana/otel-lgtm:latest
-    ports:
-      - "3005:3000" # Grafana UI
-      - "4317:4317" # OTLP gRPC
-      - "4318:4318" # OTLP HTTP
-      - "3100:3100" # Loki port
     environment:
       ENABLE_LOGS_LOKI: true
 
